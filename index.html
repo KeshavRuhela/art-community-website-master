@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART AVENUE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Courgette&family=Labrada&family=Phudu:wght@600&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
+
+
+    <style>
+        .loginMSG {
+background: #89f368;
+display: none;
+padding: 10px;
+border-radius: 10px;
+color: white;
+font-weight: bold;
+word-spacing: 3px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="loginMSG">Login sucess <span onclick="closeEmailwarning()"
+            style="text-align: right;cursor: pointer; display: unset;position:fixed; right: 10px;color: white;">X</span>
+    </div>
+    <div class="home_background">
+        <div class="start">
+            <header>
+                <li style="list-style-type: none;">
+                <li>
+                    <h1 class="art">ART AVENUE &nbsp;</h1>
+                </li>
+                <li>
+                    <p><input type="text" class="search" placeholder="Search" class="search"></p>
+                </li>
+                <li>
+
+                <li>
+                    <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
+                </li>
+                <li>
+                    <p class="head"><a href="sign_in.html" target="_blank"><span
+                                class="material-symbols-outlined">login</span></a></p>
+                </li>
+                <li>
+                    <p class="head"><a href="wishlist.html"><span class="material-symbols-outlined">favorite</span></a>
+                    </p>
+                </li>
+                <li>
+                    <p class="head"><a href="cart.html"><span
+                                class="material-symbols-outlined">shopping_cart_checkout</span></a></p>
+                </li>
+                </li>
+                <hr>
+                </li>
+            </header>
+        </div>
+
+        <div class="description" appml-data="category">
+            <li style="list-style-type: none;">
+            <li appml-repeat="cate">
+                <a href="category_view.php?category={{text}}">
+                    <div><img class="image" alt="{{text}}" src="images/{{catname}}" loading="lazy"></div>
+                    <div class="image_name">
+                        <p>{{text}} painting</p>
+                    </div>
+
+                </a>
+            </li>
+            </li>
+        </div>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_1.png" loading="lazy" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_2.jpeg" loading="lazy" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_3.jpeg" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_4.jpeg" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_5.jpeg" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_6.jpeg" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_7.png" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_8.webp" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_9.webp" loading="lazy" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+                <img alt="images" class="slide-img" src="images/image_10.webp" loading="lazy" style="width:100%">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+
+        <div class="content">
+
+            <h1>
+                "The art community is a place where imagination and creativity come to life."
+            </h1>
+            <p>Our website is a vibrant online art community that offers an extensive selection of paintings from around
+                the world, showcasing works from established and emerging artists. From classical oil paintings to
+                contemporary abstract art, we have something for everyone. We believe that art is a powerful medium that
+                has the ability to inspire, provoke, and transform, and we are proud to be a part of the art community
+                that shares this belief. Join us on this exciting journey of discovery and appreciation of the wonderful
+                world of painting.</p>
+            <p></p>
+
+        </div>
+
+        <div class="middata">
+            <div class="midcontent">
+                <h1>Art Avenue's Promise</h1>
+
+            </div>
+            <div class="inside_mid">
+                <div class="item" id="item-1">
+                    <h4>EVERYDAY LOW PRICES</h4>
+
+                    <p>No flashy sales or promo code hunting here! We offer the best prices, every single day.</p>
+                </div>
+                <div class="item" id="item-2">
+                    <h4>FREE SHIPING</h4>
+                    <p>
+                        It's simple: we'll cover the shipping. No minimums, always and forever!
+
+                    </p>
+                </div>
+                <div class="item" id="item-3">
+                    <h4>100% HAPPINESS GUARANTEE</h4>
+                    <p>
+
+                        We want you to love your art. If you don't, we'll happily issue you a full refund—no questions
+                        asked.
+                    </p>
+                </div>
+                <div class="item" id="item-4">
+                    <h4>HANDCRAFTED IN INDIA</h4>
+                    <p>
+                        Your art is professionally handcrafted by our team in Ohio with museum-quality materials.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="shop">
+        <section class="filter">
+            <h2>Filter</h2>
+        </section>
+        <div appml-data="shop">
+            <a appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
+                    style="width:180px;height: 230px; cursor: pointer; border-radius: 10px; margin:12px;"
+                    src="images/shop{{id}}.jpg"></a>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <p>"We kindly invite you to submit your artwork here for consideration to be uploaded on our website. Your
+            submission will enable you to share your work with a wider audience."
+
+        </p><a href="ideas.html">
+            <div class="submit_button"></div>
+            <div class="button1">Submit Here</div>
+        </a>
+    </div>
+    <footer>
+        <h1>Art Avenue
+
+        </h1>
+        <p>Copyright &#169;2023 Art Avenue.</p>
+    </footer>
+
+</body>
+<script src="main.js"></script>
+<script src="1.js"></script>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Signup page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Courgette&family=Labrada&family=Phudu:wght@600&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .mailexist{
+            background: #ff8a2f;
+            display: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            word-spacing: 3px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="mailexist" >Email is already Exist <span onclick="closeEmailwarning()" style="text-align: right;cursor: pointer; display: unset;position:fixed; right: 10px;color: white;">X</span></div>
+
+    <div class="start">
+        <div class="home_background" >
+            <div class="start" >
+                <header >
+                    <li style="list-style-type: none;">
+                    <li>
+                        <h1 class="art">ART AVENUE &nbsp;</h1>
+                    </li>
+                    <li>
+                        <p><input type="text" class="search" placeholder="Search" class="search"></p>
+                    </li>
+                    <li>
+                    <li>
+                        <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
+                    </li>
+                    <li>
+                        <p><a href="sign_in.html" target="_blank"><span
+                                    class="material-symbols-outlined">login</span></a></p>
+                    </li>
+                    <li>
+                        <p><a href="wishlist.html"><span class="material-symbols-outlined">favorite</span></a></p>
+                    </li>
+                    <li>
+                        <p><a href="cart.html"><span class="material-symbols-outlined">shopping_cart_checkout</span></a>
+                        </p>
+                    </li>
+                    </li>
+                    <hr>
+                    </li>
+                </header>
+            </div>
+            <div class="container_index">
+                <div class="form_box">
+                    <h1 id="title">Sign Up</h1>
+
+
+                    <form method="POST" action="db/sign_up.php">
+
+
+                        <div class="input">
+                            <div class="input_data" id="nameField">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input type="text" name="name"  placeholder="Name">
+                            </div>
+                            <!-- <hr> -->
+                            <div class="input_data">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
+                                <input type="email" name="email" required placeholder="Email">
+                            </div>
+                            <!-- <hr> -->
+                            <div class="input_data">
+                                <span class="material-symbols-outlined">
+                                    lock
+                                </span>
+                                <input type="password" required name="password"  placeholder="Password">
+                            </div>
+
+                            <div class="forget_password">
+                                <p>Forget Password <a href="#">Click Here!</a></p>
+                            </div>
+                        </div>
+                        <div class="botton">
+                            <button type="submit" id="signupbtn">Sign up</button>
+                            <button type="submit" id="signinbtn" class="disable">Sign in</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                let signUpBtn = document.getElementById("signupbtn");
+                let signInBtn = document.getElementById("signinbtn");
+                let nameField = document.getElementById("nameField");
+                let title = document.getElementById("title");
+
+                signInBtn.onclick = function () {
+                    nameField.style.maxHeight = "0";
+                    title.innerHTML = "Sign In";
+                    signUpBtn.classList.add("disable");
+                    signInBtn.classList.remove("disable");
+                }
+                signUpBtn.onclick = function () {
+                    nameField.style.maxHeight = "60px";
+                    title.innerHTML = "Sign Up";
+                    signUpBtn.classList.remove("disable");
+                    signInBtn.classList.add("disable");
+                }
+
+                
+                
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('param1')){
+                    // alert("email is allready exist");
+                    document.querySelector('.mailexist').style.display="block"
+                }
+                function closeEmailwarning(){
+                    document.querySelector('.mailexist').style.display="none"
+                }
+
+            </script>
+</body>
+
+</html>
