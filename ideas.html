@@ -15,69 +15,111 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+<style>
+    .imgMSG {
+            background: #ffa357;
+            display: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            word-spacing: 3px;
+        }
+</style>
+
 </head>
 
 <body>
-
+    <div><div class="imgMSG">Image already exist !</div> <span onclick="closeEmailwarning()"
+            style="text-align: right;cursor: pointer;z-index: 1000000; display: unset;position:fixed; right: 10px;top:8px;color: white;">X</span>
     <div class="start">
         <header>
-            <li style="list-style-type: none;">
-            <li>
-                <h1 class="art">ART AVENUE &nbsp;</h1>
-            </li>
-            <li>
-                <p><input type="text" class="search" placeholder="Search" class="search"></p>
-            </li>
-            <li>
-            <li>
-                <p class="head"><a href="main.html"><span class="material-symbols-outlined">home</span></a></p>
-            </li>
-            <li>
-                <p><a href="sign_in.html" target="_blank"><span class="material-symbols-outlined">login</span></a></p>
-            </li>
-            <li>
-                <p><a href="wishlist.html"><span class="material-symbols-outlined">favorite</span></a></p>
-            </li>
-            <li>
-                <p><a href="cart.html"><span class="material-symbols-outlined">shopping_cart_checkout</span></a></p>
-            </li>
-            </li>
-            <hr>
-            </li>
+            <ul style="list-style-type: none;">
+                <li>
+                    <h1 class="art">ART AVENUE &nbsp;</h1>
+                </li>
+                <li>
+                    <p><input type="text" class="search" placeholder="Search" class="search"></p>
+                </li>
+                <li>
+                <li>
+                    <p class="head"><a href="main.html"><span class="material-symbols-outlined">home</span></a></p>
+                </li>
+                <li>
+                    <p><a href="sign_in.html" target="_blank"><span class="material-symbols-outlined">login</span></a>
+                    </p>
+                </li>
+                <li>
+                    <p><a href="wishlist.html"><span class="material-symbols-outlined">favorite</span></a></p>
+                </li>
+                <li>
+                    <p><a href="cart.html"><span class="material-symbols-outlined">shopping_cart_checkout</span></a></p>
+                </li>
+
+
+                </li>
+                <hr>
+            </Ul>
         </header>
     </div>
 
     <div class="ideas_background">
         <div class="container">
-            <form target="_self">
+
+
+            <form action="db/ideas.php" method="POST" enctype="multipart/form-data">
 
 
                 <div>
                     <h1>Art Details</h1>
                     <div>Name:</div>
-                    <div class="input_data"><input type="text" placeholder="username"></div>
+                    <div class="input_data"><input type="text" name="name" placeholder="username"></div>
                     <div>Email:</div>
-                    <div class="input_data"><input type="email" placeholder="Email address"></div>
+                    <div class="input_data"><input type="email" name="email" placeholder="Email address"></div>
                     <div>Contact Number:</div>
-                    <div class="input_data"><input type="number" placeholder="contact_number"></div>
+                    <div class="input_data"><input type="number" name="mobile" placeholder="contact_number"></div>
                     <div>Theme:</div>
-                    <div class="input_data"><input type="text" placeholder="Art name"></div>
+                    <div class="input_data"><input type="text" name="title" placeholder="Art name"></div>
                     <div>Price:</div>
                     <div class="input_data"><span class="material-symbols-outlined">
                             currency_rupee
-                        </span><input type="number" placeholder="price_₹"></div>
+                        </span><input type="number" name="price" placeholder="price_₹"></div>
                     <div>Upload Image:</div>
-                    <div class="input_data"><input type="file" id="myfile" name="filename"></div>
+                    <div class="input_data"><input type="file" name="img" id="myfile" name="filename"></div>
                     <div>Description:</div>
-                    <div><textarea cols="30" rows="4" value="Description" class="input_data"></textarea></div>
-                    <div><button type="button" placeholder="submit" >Submit</button></div>
+                    <div><textarea cols="30" rows="4" value="Description" class="input_data" name="desc"></textarea>
+                    </div>
+                    <div><button type="submit" placeholder="submit">Submit</button></div>
             </form>
         </div>
     </div>
     </div>
 </body>
+<script>
+    const params = new URLSearchParams(window.location.search);
+if (params.get('imageexist')==1) {
+    document.querySelector('.imgMSG').style.display = "block";
 
-</html>
-</body>
+}else if (params.get('imageexist')==0){
+    document.querySelector('.imgMSG').style.display = "block";
+    document.querySelector('.imgMSG').innerHTML = "Image Cant be Uploaded !";
+    document.querySelector('.imgMSG').style.background = "orange";
+
+}
+else if (params.get('imageexist')=='success'){
+    document.querySelector('.imgMSG').style.display = "block";
+    document.querySelector('.imgMSG').innerHTML = "Image Uploaded Success !";
+    document.querySelector('.imgMSG').style.background = "lightgreen";
+
+}
+function closeEmailwarning() {
+    document.querySelector('.imgMSG').style.display = "none"
+}
+//     document.querySelector('.imgMSG').style.display="block";
+
+//     function closeEmailwarning() {
+//     document.querySelector('.imgMSG').style.display = "none"
+// }
+</script>
 
 </html>

@@ -9,10 +9,13 @@
     
     if ($_name == ""){
         if (check_email_dataRetrieve($_email,$_pass,$conn)){
-            header("location: ../index.html?login=true");
+            header("location: ../h.index.html?login=1");
+            // echo "heelloo";
+            exit();
         }
+        header("location: ../index.html?login=0");
+        exit();
     }
-    exit();
     // check email already exist or not
     if (check_email($_email, $conn)){
         
@@ -23,11 +26,13 @@
         $result = mysqli_query($conn,$query);
         if ($result){
             echo "inserted Success !";
+            header("location: ../sign_in.html?param1=0");
+
         }
     }
     else {
         echo "<h3>email already exist</h3>";
-        header("location: ../sign_in.html?param1=true");
+        header("location: ../sign_in.html?param1=1");
     }
 
 

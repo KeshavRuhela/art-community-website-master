@@ -31,7 +31,7 @@
 
 <body>
 
-    <div class="mailexist" >Email is already Exist <span onclick="closeEmailwarning()" style="text-align: right;cursor: pointer; display: unset;position:fixed; right: 10px;color: white;">X</span></div>
+    <div><div class="mailexist" >Email is already Exist</div> <span onclick="closeEmailwarning()" style="text-align: right;cursor: pointer;z-index: 1000000; display: unset;position:fixed; right: 10px;top:8px;color: white;">X</span></div>
 
     <div class="start">
         <div class="home_background" >
@@ -129,12 +129,23 @@
                 
                 
                 const params = new URLSearchParams(window.location.search);
-                if (params.get('param1')){
+                if (params.get('param1')==1){
                     // alert("email is allready exist");
                     document.querySelector('.mailexist').style.display="block"
                 }
+                if (params.get('param1')==0){
+                    // alert("email is allready exist");
+                    document.querySelector('.mailexist').style.display="block";
+                    document.querySelector('.mailexist').style.background="green";
+                    document.querySelector('.mailexist').innerHTML="Successful Registered !";
+                }
+                if (params.get('loginfirst')){
+                    // alert("email is allready exist");
+                    document.querySelector('.mailexist').style.display="block";
+                    document.querySelector('.mailexist').innerHTML="You Have To login First";
+                }
                 function closeEmailwarning(){
-                    document.querySelector('.mailexist').style.display="none"
+                    document.querySelector('.mailexist').style.display="none";
                 }
 
             </script>

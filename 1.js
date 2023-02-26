@@ -1,7 +1,14 @@
 const params = new URLSearchParams(window.location.search);
-if (params.get('login')) {
+if (params.get('login')==1) {
     // alert("email is allready exist");
-    document.querySelector('.loginMSG').style.display = "block"
+    document.querySelector('.loginMSG').style.display = "block";
+    // document.querySelector('.loginMSG').innerHTML = "Email Or Password is incorect";
+
+}else if (params.get('login')==0){
+    document.querySelector('.loginMSG').style.display = "block";
+    document.querySelector('.loginMSG').innerHTML = "Email Or Password is incorect";
+    document.querySelector('.loginMSG').style.background = "orange";
+
 }
 function closeEmailwarning() {
     document.querySelector('.loginMSG').style.display = "none"
