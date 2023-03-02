@@ -24,6 +24,7 @@
           background:lightgray; font-size:1.3rem; padding:3px; padding-left:10px; margin-right:5px; border-radius:10px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
@@ -66,7 +67,7 @@
 
               
                 <div id="commentscontainers" style="width:45%; overflow-y:overlay; padding:5px; height:100%; margin:auto; border:1px solid black;">
-                <p onclick="call_Comments()">Load</p>
+                <p onclick="call_Comments('.$id.')">Load</p>
                 </div>
               
               </div>
@@ -96,45 +97,58 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 <script>
-    
+    const params = new URLSearchParams(window.location.search).get('id');
+    call_Comments(params);
+
+
     function send(id){
       var data = $("#data-send").val(); // it is not a plugin is just an example
-            data={"comment":data,"id":id};
+            data1={"comment":data,"id":id};
+            if(data != ""){
             $.ajax({
               url: "http://localhost/art-community-website-master/Api/comment.php",
               type: "POST",
-            data: data,
+            data: data1,
+            beforeSend: function () {    
+              // var sethtml = document.querySelector("#commentscontainers");
+              // sethtml.innerHTML = "<div class='spinner-border' role='status'> <span class='visually-hidden'>Loading...</span></div>";
+                     
+                },
             success: function(data) {
                 // alert("Data: " + data + "\nStatus: " + status);
                 console.log(data);
                 var sethtml = document.querySelector("#commentscontainers");
                 sethtml.innerHTML += data;
                 $("#data-send").val("");
-
             }
         });
     }
+  }
 
     
     
-    function call_Comments(){
+    function call_Comments(id){
       
       $.ajax({
               url: "http://localhost/art-community-website-master/Api/load_comment.php",
               type: "POST",
-              data:"",
-            success: function(data) {
+              data:{"id":id},
+                beforeSend: function () {    
+                    //  $("#loadingDIV").show();
+                     var sethtml = document.querySelector("#commentscontainers");
+                     sethtml.innerHTML = "<div class='spinner-border' role='status'> <span class='visually-hidden'>Loading...</span></div>";
+                },
+                success: function(data) {
                 console.log(data);
-                // var sethtml = document.querySelector("#commentscontainers");
-                // sethtml.innerHTML += data;
-                // $("#data-send").val("");
-
+                var sethtml = document.querySelector("#commentscontainers");
+                sethtml.innerHTML = data;
+                sethtml.scrollTop =sethtml.scrollHeight;
             }
 
     });
   }
 
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </html>

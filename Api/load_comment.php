@@ -1,23 +1,29 @@
 <?php
 
     if ($_SERVER['REQUEST_METHOD']=="POST"){
-        $com = $_POST['comment'];
-        $img_id = $_POST['id'];
-
+        $id = $_POST['id'];
         // $a = json_encode({"comment":"$com"});
 
-        $query = "select * from comments;";
+        $query = "select * from comments where img_id=$id;";
 
         require "../db/mainDB.php";
         $result = mysqli_query($conn,$query);
-        $timeVar = time();
-        $date_time = date('Y-m-d H:i:s', $timeVar);
+       
+        $str_all ="";
 
         if ($result){
-            echo "<p class ='comments'>
-            $com
-            <span style='font-size:0.8rem;'>$date_time</span>
-            </p>";
+             
+            while($data = mysqli_fetch_assoc($result)){
+            //    echo $data['comment'];
+                // print_r($data);
+                $str_all .= "<p class ='comments'>$data[comment]
+                <span style='font-size:0.8rem;'>$data[time]</span>
+                </p>";
+            }
+            echo $str_all;
+
+            
+
 
         }
 
