@@ -20,7 +20,7 @@ var shop = {
 };
 
 var category = {
-    "cate": [{ "catname": "madhubani1.jpeg", "text": "madhubani1" },{ "catname": "miniature1.webp", "text": "miniature1" },{ "catname": "oil1.jpeg", "text": "oil1" },{ "catname": "warli1.jpeg", "text": "warli1" },{ "catname": "gond1.jpg", "text": "gond1" },{ "catname": "kalamkari1.jpeg", "text": "kalamkari1" },{ "catname": "tanjore1.jpeg", "text": "tanjore1" },
+    "cate": [{ "catname": "madhubani1.jpeg", "text": "madhubani" },{ "catname": "miniature1.webp", "text": "miniature" },{ "catname": "oil1.jpeg", "text": "oil" },{ "catname": "warli1.jpeg", "text": "warli" },{ "catname": "gond1.jpg", "text": "gond" },{ "catname": "kalamkari1.jpeg", "text": "kalamkari" },{ "catname": "tanjore1.jpeg", "text": "tanjore" },
     ]
 };
 
