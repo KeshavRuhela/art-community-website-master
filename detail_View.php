@@ -56,9 +56,9 @@
                   <div class="card mb-3">
                     <img src="images/'.$all[count($all)-1][7].'" class="card-img-top" alt="image">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title">Title: '.$all[count($all)-1][1].'</h5>
+                      <p class="card-text" style="font-weight:1000; font-size: 1.5rem;">₹<small style="font-weight:1000;font-size: 1rem;" class="text">'.$all[count($all)-1][3].'</small></p>
+                      <p class="card-text" >Description : '.$all[count($all)-1][2].'</p>
                     </div>
                   </div>
                 
