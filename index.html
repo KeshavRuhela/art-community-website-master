@@ -36,8 +36,9 @@
 </head>
 
 <body>
-    <div><div class="loginMSG">Login sucess</div> <span onclick="closeEmailwarning()"
-    style="text-align: right;cursor: pointer;z-index: 1000000; display: unset;position:fixed; right: 10px;top:8px;color: white;">X</span>
+    <div>
+        <div class="loginMSG">Login sucess</div> <span onclick="closeEmailwarning()"
+            style="text-align: right;cursor: pointer;z-index: 1000000; display: unset;position:fixed; right: 10px;top:8px;color: white;">X</span>
     </div>
     <div class="home_background">
         <div class="start">
@@ -202,10 +203,63 @@
     </div>
     <div class="shop">
         <section class="filter">
-            <h2>Filter</h2>
+
+
+            <div id="filter-section">
+                <form id="filter-form">
+                    <h1>Filters</h1>
+
+                    <div class="category-painting">
+                        <label for="Painting">Art_type</label>
+                        <select name="painting" id="painting">
+                            <option value="">Any</option>
+                            <option value="Madhubani Painting">Madhubani Painting</option>
+                            <option value="Miniature Painting">Miniature Painting</option>
+                            <option value="Gond Painting">Gond Painting</option>
+                            <option value="Oil Painting">Oil Painting</option>
+                            <option value="Warli Painting">Warli Painting</option>
+                            <option value="Tanjore Painting">Tanjore Painting</option>
+                            <option value="Kalamkari Painting">Kalamkari Painting</option>
+
+                        </select>
+
+
+                        <div class="color-group">
+                            <label for="Color">Color:</label>
+                            <select name="color" id="color">
+                                <option value="">Any</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Green">Green</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Grey">Grey</option>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Red">Red</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Neutral">Neutral</option>
+                            </select>
+
+
+                            <div class="form-group">
+                                <label for="price">Price Range:</label>
+                                <select name="price" id="price">
+                                    <option value="">Any</option>
+                                    <option value="0-50">RS0 - Rs50</option>
+                                    <option value="50-100">Rs50 - Rs100</option>
+                                    <option value="100-500">Rs100 - Rs500</option>
+                                    <option value="500+">Rs500+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit">Apply</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                </form>
+            </div>
         </section>
-        <div appml-data="shop">
-            <a appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
+        <div class="shop1" appml-data="shop">
+            <a class="shopping_section" appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
                     style="width:180px;height: 230px; cursor: pointer; border-radius: 10px; margin:12px;"
                     src="images/shop{{id}}.jpg"></a>
         </div>
@@ -214,10 +268,9 @@
     <div class="bottom">
         <p>"We kindly invite you to submit your artwork here for consideration to be uploaded on our website. Your
             submission will enable you to share your work with a wider audience."
-
-        </p><a href="ideas.html">
-            <div class="submit_button"></div>
-            <div class="button1">Submit Here</div>
+        </p>
+        <a href="ideas.html">
+            <div class="button1">SUBMIT YOUR ART HERE!</div>
         </a>
     </div>
     <footer>
