@@ -27,7 +27,7 @@
 </head>
 <body>
     
-
+<div class="filters" style="padding:10px; background:lightgray; border-radius:10px;">Filters :</div>
 
 <?php 
 

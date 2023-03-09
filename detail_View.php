@@ -23,6 +23,9 @@
         .comments{
           background:lightgray; font-size:1.3rem; padding:3px; padding-left:10px; margin-right:5px; border-radius:10px;
         }
+        #like-it{
+          cursor: pointer;
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
@@ -57,7 +60,7 @@
                     <img src="images/'.$all[count($all)-1][7].'" class="card-img-top" alt="image">
                     <div class="card-body">
                       <h5 class="card-title">Title: '.$all[count($all)-1][1].'</h5>
-                      <p class="card-text" style="font-weight:1000; font-size: 1.5rem;">₹<small style="font-weight:1000;font-size: 1rem;" class="text">'.$all[count($all)-1][3].'</small></p>
+                      <p class="card-text" style="font-weight:1000; font-size: 1.5rem;">₹<small style="font-weight:1000;font-size: 1rem;" class="text">'.$all[count($all)-1][3].'</small> <a onclick="like_it()" id="like-it">&#10084;</a></p>
                       <p class="card-text" >Description : '.$all[count($all)-1][2].'</p>
                     </div>
                   </div>
@@ -150,5 +153,16 @@
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script>
+
+  var liking = document.querySelector("#like-it");
+
+  function like_it(){
+    alert ("like this");
+    
+  }
+  
+</script>
 
 </html>

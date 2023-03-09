@@ -43,7 +43,7 @@
                 </li>
                 <li>
                 <li>
-                    <p class="head"><a href="main.html"><span class="material-symbols-outlined">home</span></a></p>
+                    <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
                 </li>
                 <li>
                     <p><a href="sign_in.html" target="_blank"><span class="material-symbols-outlined">login</span></a>
@@ -89,7 +89,7 @@
                     <div>Description:</div>
                     <div><textarea cols="30" rows="4" value="Description" class="input_data" name="desc"></textarea>
                     </div>
-                    <div><button type="submit" placeholder="submit">Submit</button></div>
+                    <div><button class="submit" type="submit" placeholder="submit">Submit</button></div>
             </form>
         </div>
     </div>
@@ -115,7 +115,11 @@ else if (params.get('imageexist')=='success'){
 function closeEmailwarning() {
     document.querySelector('.imgMSG').style.display = "none"
 }
+//     document.querySelector('.imgMSG').style.display="block";
 
+//     function closeEmailwarning() {
+//     document.querySelector('.imgMSG').style.display = "none"
+// }
 </script>
 
 </html>
