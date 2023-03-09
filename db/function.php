@@ -35,7 +35,9 @@
     }
 
     function check_User(){
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         if (isset($_SESSION['user'])){
             $arr = [$_SESSION['user'],$_SESSION['user_id']];
             return $arr;

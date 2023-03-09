@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail View</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <style>
         .set-size {
             width: 80rem;
@@ -60,7 +59,7 @@
                     <img src="images/'.$all[count($all)-1][7].'" class="card-img-top" alt="image">
                     <div class="card-body">
                       <h5 class="card-title">Title: '.$all[count($all)-1][1].'</h5>
-                      <p class="card-text" style="font-weight:1000; font-size: 1.5rem;">₹<small style="font-weight:1000;font-size: 1rem;" class="text">'.$all[count($all)-1][3].'</small> <a onclick="like_it()" id="like-it">&#10084;</a></p>
+                      <p class="card-text" style="font-weight:1000; font-size: 1.5rem;">₹<small style="font-weight:1000;font-size: 1rem;" class="text">'.$all[count($all)-1][3].'</small> <a onclick="like_it()" id="like_it">🤍</a></p>
                       <p class="card-text" >Description : '.$all[count($all)-1][2].'</p>
                     </div>
                   </div>
@@ -92,6 +91,20 @@
     else {
         echo "<h2>Can't be open due to some issue.</h2>";
     }
+    require 'db/function.php';
+    
+    if (check_user()){
+      $arr0 = check_user()[0];
+      $arr1 = check_user()[1];
+      echo "<input id='namearr0' type='text' hidden value='$arr0'/>";
+      echo "<input id='userarr1' type='text' hidden value='$arr1'/>";
+    }
+    else {
+      echo "<input id='namearr0' type='text' hidden value='0' />";
+      echo "<input id='userarr1' type='text' hidden value='0' />";
+    }
+
+
     ?>
 
 </body>
@@ -152,17 +165,37 @@
   }
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 <script>
 
-  var liking = document.querySelector("#like-it");
+  // var liking = document.querySelector("#like-it");
 
-  function like_it(){
-    alert ("like this");
+  var like_symbol = $("#like_it");
+  var user_name = $("#namearr0").val();
+  var user_id = $("#userarr1").val();
+  // alert("k"+user_name +user_id);
+
+    function like_it(){
+      if (user_name !='0' && user_id!='0'){
+        $.ajax({
+            url: "http://localhost/art-community-website-master/Api/like.php",
+            type: "POST",
+            data:{"id":params,"user_name":user_name,"user_id":user_id},
+            beforeSend: function () {        
+                },
+            success: function(data) {
+                console.log(data);
+                like_symbol.text("❤️");
+            },
+            error : function(){
+              like_symbol.text("🖤");
+            }
+        });
+      }
+    }
     
-  }
-  
-</script>
+      
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </html>
