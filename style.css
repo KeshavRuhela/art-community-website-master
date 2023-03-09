@@ -464,12 +464,6 @@ input {
     font-size: 1.7rem;
 }
 
-
-
-.shop {
-  
-}
-
 .shop1{
     /* margin-top: 9rem;
     margin-left: 24rem; */
@@ -512,7 +506,6 @@ footer p {
     font-family: CalibreFamily, Helvetica Neue, Helvetica, Arial, sans-serif;
     height: 100%;
 }
-
 .filter {
     width: 20%;
     min-width: 250px;
@@ -571,7 +564,6 @@ button[type="submit"],
 button[type="reset"] {
     margin-right: 5px;
 }
-
 
 /* slideshow */
 @media only screen and (max-width: 300px) {

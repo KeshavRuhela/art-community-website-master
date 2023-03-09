@@ -9,12 +9,12 @@ if($check){
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $file = $_FILES['img'];
-        $name= $_POST['name'];
-        $email= $_POST['email'];
-        $title= $_POST['title'];
-        $mobile= $_POST['mobile'];
-        $price= $_POST['price'];
-        $desc= $_POST['desc'];
+        $name= htmlspecialchars($_POST['name']);
+        $email= htmlspecialchars($_POST['email']);
+        $title= htmlspecialchars($_POST['title']);
+        $mobile= htmlspecialchars($_POST['mobile']);
+        $price= htmlspecialchars($_POST['price']);
+        $desc= htmlspecialchars($_POST['desc']);
 
         echo var_dump($file)." |   $name,|  $email,|  $title,|  $mobile,|  $price";
 

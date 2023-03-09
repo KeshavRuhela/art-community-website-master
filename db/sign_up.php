@@ -9,7 +9,7 @@
     
     if ($_name == ""){
         if (check_email_dataRetrieve($_email,$_pass,$conn)){
-            header("location: ../h.index.html?login=1");
+            header("location: ../index.html?login=1");
             // echo "heelloo";
             exit();
         }
