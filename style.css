@@ -507,7 +507,6 @@ footer p {
     font-family: CalibreFamily, Helvetica Neue, Helvetica, Arial, sans-serif;
     height: 100%;
 }
-
 .filter {
     width: 20%;
     min-width: 250px;
@@ -566,6 +565,65 @@ button[type="submit"],
 button[type="reset"] {
     margin-right: 5px;
 }
+.filter {
+    width: 20%;
+    min-width: 250px;
+    height: available;
+    min-height: 200px;
+    height: 100%;
+    float: left;
+    background-color: rgb(233, 222, 222);
+    border-collapse: separate;
+    margin-right: 3rem;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter h2 {
+    text-align: center;
+}
+
+
+#filter-form label {
+    font-weight: lighter;
+    margin-right: 40px;
+}
+
+#filter-form input[type="checkbox"],
+#filter-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+#filter-form input[type="text"] {
+    width: 150px;
+}
+
+#filter-section {
+
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: large;
+    padding-right: 60px;
+    padding: auto;
+}
+
+
+
+button[type="submit"],
+button[type="reset"] {
+    margin-right: 5px;
+}
+
 
 
 /* slideshow */
