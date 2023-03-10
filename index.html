@@ -31,6 +31,11 @@
             font-weight: bold;
             word-spacing: 3px;
         }
+        #view-all:hover{
+            background:green;
+            color: white!important;
+            
+        }
     </style>
 
 </head>
@@ -262,6 +267,7 @@
             <a class="shopping_section" appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
                     style="width:180px;height: 230px; cursor: pointer; border-radius: 10px; margin:12px;"
                     src="images/shop{{id}}.jpg"></a>
+                    <a href="db/show_all.php" id="view-all" style="width:180px; height: 230px; cursor: pointer; border-radius: 10px; padding: 20px; border: 2px solid lightgreen;color: green; margin:12px;">View All</a>
         </div>
     </div>
     </div>
