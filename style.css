@@ -19,6 +19,7 @@ header h1 {
     margin: 0 1rem;
 }
 
+
 .search {
     cursor: pointer;
     background-color: #eaeaea;
@@ -27,6 +28,7 @@ header h1 {
     max-height: 10vh;
     margin-left: 1rem;
     width: 40vw;
+
 }
 
 .art {
@@ -36,6 +38,7 @@ header h1 {
     font-weight: bolder;
     font-size: 2.5rem;
     height: 2rem;
+
 }
 
 hr {
@@ -49,11 +52,14 @@ hr {
     margin: 0;
     height: 10rem;
     text-align: center;
+
 }
+
 
 .description li {
     display: inline-block;
     margin: 0 0.2rem;
+
 }
 
 .image {
@@ -61,7 +67,10 @@ hr {
     height: 150px;
     border-radius: 100%;
     margin-top: 4rem;
+
+
 }
+
 
 .image_name {
     text-align: center;
@@ -79,12 +88,14 @@ hr {
     height: 500px;
 }
 
+
 .slideshow-container {
     max-width: 500px;
     position: relative;
     margin: auto;
     margin-top: 13rem;
     border: #1d1c1c 6px double;
+
 }
 
 .dot {
@@ -116,7 +127,9 @@ hr {
     }
 }
 
+
 .content {
+    /* margin-top: 44rem; */
     text-align: center;
     font-size: 1.2rem;
     position: relative;
@@ -131,6 +144,7 @@ hr {
     line-height: 2rem;
 }
 
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -139,15 +153,18 @@ hr {
         'opsz' 48
 }
 
+
 a {
     text-decoration: none;
     color: rgb(32, 15, 143);
     font-family: 'Calistoga', cursive;
+
 }
 
 a:hover {
     color: rgb(40, 131, 170);
 }
+
 
 .container_index {
     width: 100%;
@@ -156,11 +173,13 @@ a:hover {
     background-size: cover;
     position: absolute;
     font-size: 1px;
+
 }
 
 .form_box {
     width: 90%;
     max-width: 400px;
+    /* max-height: 350px; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -168,6 +187,7 @@ a:hover {
     background: #fff;
     padding: 50px 60px 70px;
     text-align: center;
+    /* background: transparent; */
 }
 
 .form_box h1 {
@@ -176,6 +196,7 @@ a:hover {
     color: #245082;
     position: relative;
     font-family: 'Calistoga', cursive;
+
 }
 
 .input {
@@ -190,12 +211,14 @@ a:hover {
     max-height: 65px;
     transition: max-height 0.5s;
     overflow: hidden;
+
 }
 
 .input_data i {
     margin-left: 15px;
     color: #999;
 }
+
 
 .forget_password p {
     font-size: 1.5rem;
@@ -221,6 +244,8 @@ a:hover {
     outline: 0;
     cursor: pointer;
     transition: background 1s;
+
+
 }
 
 .botton button.disable {
@@ -235,6 +260,7 @@ a:hover {
 
 .ideas_background {
     width: 100%;
+    /* height: 120%; */
     background-image: linear-gradient(rgba(33, 33, 59, 0.8), rgba(0, 0, 50, 0.8)), url(images/sign_up_image.webp);
     background-size: cover;
     position: absolute;
@@ -242,14 +268,18 @@ a:hover {
     padding-bottom: 2rem;
 }
 
+
 form p {
     text-align: left;
     font-size: 15px;
+
 }
 
 form a {
     color: rgb(6, 64, 88);
 }
+
+
 
 input {
     width: 100%;
@@ -259,9 +289,12 @@ input {
     padding: 18px 15px;
 }
 
+
+
 .head {
     margin-left: 27rem;
     position: relative;
+
 }
 
 
@@ -283,6 +316,7 @@ input {
     padding: 10px;
     margin-top: 60px;
     font-family: 'Shantell Sans', cursive;
+
 }
 
 .container h1 {
@@ -322,6 +356,7 @@ input {
 .inside_mid {
     display: flex;
     border: 2px solid white;
+    /* border: hidden; */
 }
 
 .middata {
@@ -335,30 +370,31 @@ input {
 
 .item {
     font-size: small;
+
+
 }
 
 #item-1 h4 {
     background-color: rgb(237, 164, 173);
     margin: auto;
     padding: 8px;
-    max-width: fit-content;
-    font-size: 1.0rem;
+    max-width: 50%;
+
 }
 
 #item-2 h4 {
     background-color: rgb(149, 225, 249);
     margin: auto;
     padding: 8px;
-    max-width: fit-content;
-    font-size: 1.0rem;
+    max-width: 37%;
+
 }
 
 #item-3 h4 {
     background-color: rgb(248, 232, 161);
     margin: auto;
     padding: 8px;
-    max-width: fit-content;
-    font-size: 1.0rem;
+    max-width: 56%;
 
 }
 
@@ -366,130 +402,38 @@ input {
     background-color: rgb(189, 249, 151);
     margin: auto;
     padding: 8px;
-    max-width: fit-content;
-    font-size: 1.0rem;
+    max-width: 49%;
 
 }
 
 
 #item-1 p {
-
+    font-size: 15px;
     text-align: center;
-    max-width: fit-content;
-    font-size: 0.6rem;
-    margin-left: 0.6rem;
+    max-width: 90%;
 
 
 }
 
 #item-2 p {
-
+    font-size: 15px;
     text-align: center;
-    max-width: fit-content;
-    font-size: 0.6rem;
-    margin-left: 0.6rem;
+    max-width: 90%;
 
 }
 
 #item-3 p {
-
+    font-size: 15px;
     text-align: center;
-    max-width: fit-content;
-    font-size: 0.6rem;
-    margin-left: 0.6rem;
+    max-width: 90%;
 
 }
 
 #item-4 p {
-
+    font-size: 15px;
     text-align: center;
-    max-width: fit-content;
-    font-size: 0.6rem;
-    margin-bottom: 4rem;
-    margin-left: 0.6rem;
+    max-width: 90%;
 
-}
-
-
-.filter {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 60px;
-
-}
-
-#filter-form {
-    padding: 5px;
-    margin-top: 0px;
-}
-
-#filter-form ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    list-style: none;
-}
-
-.category-painting p {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-    color: rgb(173, 25, 25);
-    font-size: 1.5rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.category-painting {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-}
-
-.color-group {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-
-}
-
-.form-group {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-}
-
-.form-discount {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-}
-
-.shape {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-}
-
-.Exclusive {
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-}
-
-.apply-submit {
-    list-style: none;
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-    margin-left: 6rem;
-    font-size: medium;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    font-size: medium;
-    padding-right: 0px;
 }
 
 .bottom {
@@ -498,6 +442,8 @@ label {
     background-color: #d7e6f5 !important;
     background-size: 80%;
     margin: 0;
+    /* height: rem; */
+
 }
 
 .bottom p {
@@ -506,6 +452,7 @@ label {
     max-width: 50%;
     padding-top: 30px;
     margin-bottom: 2rem;
+
 }
 
 .button1 {
@@ -513,11 +460,16 @@ label {
     margin-bottom: 0rem;
     padding: 0;
     margin-top: 0;
+    /* text-align: center; */
     font-size: 1.7rem;
 }
 
-.shop1 {
-    margin: 0rem 6rem 6rem 3rem;
+.shop1{
+    /* margin-top: 9rem;
+    margin-left: 24rem; */
+    margin: 9rem 0 4rem 24rem;
+    position: relative;
+    
 }
 
 .shop-image {
@@ -530,14 +482,6 @@ label {
 
 }
 
-#view-all {
-    position: relative;
-    text-align: center;
-    margin-top: 2rem;
-    background-color: #6c757f;
-    color: whitesmoke;
-}
-
 
 footer h1 {
     text-align: center;
@@ -548,6 +492,8 @@ footer h1 {
     margin-bottom: 0px;
     color: white;
     padding-top: 2rem;
+
+
 }
 
 footer p {
@@ -560,6 +506,65 @@ footer p {
     font-family: CalibreFamily, Helvetica Neue, Helvetica, Arial, sans-serif;
     height: 100%;
 }
+.filter {
+    width: 20%;
+    min-width: 250px;
+    height: available;
+    min-height: 200px;
+    height: 100%;
+    float: left;
+    background-color: rgb(233, 222, 222);
+    border-collapse: separate;
+    margin-right: 3rem;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter h2 {
+    text-align: center;
+}
+
+
+#filter-form label {
+    font-weight: lighter;
+    margin-right: 40px;
+}
+
+#filter-form input[type="checkbox"],
+#filter-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+#filter-form input[type="text"] {
+    width: 150px;
+}
+
+#filter-section {
+
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: large;
+    padding-right: 60px;
+    padding: auto;
+}
+
+
+
+button[type="submit"],
+button[type="reset"] {
+    margin-right: 5px;
+}
+
 
 /* slideshow */
 @media only screen and (max-width: 300px) {
@@ -568,8 +573,8 @@ footer p {
     }
 }
 
-@media(max-width:500px) {
 
+@media(max-width:500px) {
     .art {
         display: inline-block;
         color: rgb(218, 5, 5);
@@ -591,6 +596,7 @@ footer p {
         height: 10rem;
         border-radius: 100%;
         margin-top: 4rem;
+        /* position: relative; */
         justify-content: space-between;
     }
 
@@ -599,9 +605,8 @@ footer p {
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        max-width: 100%;
+        max-width: 90%;
         text-align: center;
-        max-height: 1.2rem;
 
     }
 
@@ -613,16 +618,7 @@ footer p {
 
     }
 
-    .start ul {
-        margin: 0;
-        padding: 0;
-    }
-
     .start li {
-        margin: 0;
-    }
-
-    hr {
         margin: 0;
     }
 
@@ -681,6 +677,7 @@ footer p {
     .inside_mid {
         display: flex;
         border: 2px solid white;
+        /* border: hidden; */
     }
 
     .middata {
@@ -697,7 +694,6 @@ footer p {
 
     .item {
         font-size: small;
-        margin-left: 0.5rem;
 
 
     }
@@ -705,25 +701,32 @@ footer p {
     #item-1 h4 {
         background-color: rgb(237, 164, 173);
         margin: auto;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-2 h4 {
         background-color: rgb(149, 225, 249);
         margin: auto;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-3 h4 {
         background-color: rgb(248, 232, 161);
         margin: auto;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-4 h4 {
         background-color: rgb(189, 249, 151);
         margin: auto;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 95%;
 
     }
 
@@ -732,12 +735,15 @@ footer p {
         font-size: 13px;
         text-align: center;
         max-width: 100%;
+
+
     }
 
     #item-2 p {
         font-size: 13px;
         text-align: center;
         max-width: 100%;
+
     }
 
     #item-3 p {
@@ -755,92 +761,23 @@ footer p {
     }
 
     .filter {
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 0px;
-        margin-left: 0;
-
+        width: 13%;
+        min-width: 200px;
+        height: available;
+        min-height: 100px;
+        float: left;
+        background-color: rgb(231, 206, 206);
+        border-collapse: separate;
+        margin-right: 2.5rem;
+        position: relative;
     }
 
-    #filter-form {
-        margin-top: 0px;
-
-    }
-
-    #filter-form ul {
-        margin-top: 0px;
-        margin-bottom: 0px;
+    .filter ul {
         list-style: none;
-
     }
 
-    .category-painting p {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        color: rgb(173, 25, 25);
-        font-size: 1.5rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    }
-
-    .category-painting {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .color-group {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .form-group {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .form-discount {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-
-    }
-
-    .shape {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .Exclusive {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .apply-submit {
-        list-style: none;
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        margin-left: 6rem;
-        font-size: medium;
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        font-size: medium;
-        padding-right: 0px;
+    .filter h2 {
+        text-align: center;
     }
 
     .bottom {
@@ -884,18 +821,12 @@ footer p {
     }
 
     .image {
-        width: 7rem;
-        height: 7rem;
+        width: 18rem;
+        height: 10rem;
         border-radius: 100%;
         margin-top: 4rem;
+        /* position: relative; */
         justify-content: space-between;
-    }
-
-    .image_name {
-        position: relative;
-        width: 2rem;
-        font-size: 1.3rem;
-        text-align: center;
     }
 
     .search {
@@ -904,8 +835,8 @@ footer p {
         align-items: center;
         margin: 0 auto;
         max-width: 100%;
-        max-height: 2.5rem;
         text-align: center;
+
     }
 
     .head {
@@ -913,26 +844,36 @@ footer p {
         justify-content: end;
         max-width: 80px;
         margin: 0;
+
     }
 
     .start li {
         margin: 0;
     }
 
+
+    .image {
+        width: 6.5rem;
+    }
+
+    .image_name {
+        width: 2rem;
+        font-size: 1rem;
+    }
+
     .slideshow-container {
         max-width: 50%;
-        max-height: 20%;
+        max-height: 50%;
         margin-top: 30rem;
     }
 
     .content {
         max-width: 100%;
-        margin: 3rem;
+        margin: 0;
     }
 
     .content p {
         margin: 0;
-        margin-top: 2rem;
         max-width: 100%;
         text-align: center;
         margin-left: 1.5rem;
@@ -964,80 +905,103 @@ footer p {
     .inside_mid {
         display: flex;
         border: 2px solid white;
+        /* border: hidden; */
     }
 
     .middata {
+
         color: #666;
         font-family: CalibreFamily, Helvetica Neue, Helvetica, Arial, sans-serif;
         padding-left: 0px;
         font-size: 15px;
         margin: 0px;
         line-height: normal;
+
     }
 
     .item {
         font-size: small;
+
+
     }
 
     #item-1 h4 {
         background-color: rgb(237, 164, 173);
         margin: auto;
-        font-size: 0.9rem;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-2 h4 {
         background-color: rgb(149, 225, 249);
         margin: auto;
-        font-size: 0.9rem;
-
-        max-width: fit-content;
-
+        /* padding: 8px; */
+        max-width: 88%;
 
     }
 
     #item-3 h4 {
         background-color: rgb(248, 232, 161);
         margin: auto;
-        font-size: 0.9rem;
-
-        max-width: fit-content;
-
+        /* padding: 8px; */
+        max-width: 88%;
 
     }
 
     #item-4 h4 {
         background-color: rgb(189, 249, 151);
         margin: auto;
-        font-size: 0.9rem;
-        max-width: fit-content;
+        /* padding: 8px; */
+        max-width: 95%;
+
     }
 
 
     #item-1 p {
-        font-size: 11px;
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
+        max-width: 100%;
 
 
     }
 
     #item-2 p {
-        font-size: 11px;
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
+        max-width: 100%;
     }
 
     #item-3 p {
-        font-size: 11px;
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
+        max-width: 100%;
     }
 
     #item-4 p {
-        font-size: 11px;
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
+        max-width: 100%;
+    }
+
+    .filter {
+        width: 12%;
+        min-width: 200px;
+        /* height: available; */
+        min-height: 160px;
+        float: left;
+        background-color: rgb(231, 206, 206);
+        border-collapse: separate;
+        margin-right: 2.5rem;
+        position: relative;
+    }
+
+    .filter ul {
+        list-style: none;
+    }
+
+    .filter h2 {
+        text-align: center;
     }
 
     .bottom {
@@ -1048,7 +1012,7 @@ footer p {
 
     .bottom p {
         text-align: center;
-        margin-left: 145px;
+        margin-left: 160px;
     }
 
     .button1 {
@@ -1060,20 +1024,12 @@ footer p {
         font-size: 1.7rem;
     }
 
-    .shop1 {
-        margin: 2rem;
-    }
 
-    #view-all {
-        position: relative;
-        text-align: center;
-        margin-top: 2rem;
-        background-color: #6c757f;
-        color: whitesmoke;
-    }
+
 }
 
 @media(min-width:800px)and (max-width:1200px) {
+
     .art {
         color: rgb(218, 5, 5);
         font-family: 'Labrada', serif;
@@ -1082,14 +1038,17 @@ footer p {
         margin: 0 auto;
         text-align: center;
         padding-left: 1rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
+
     }
 
+
     .image {
-        width: 9rem;
-        height: 9rem;
+        width: 12rem;
+        height: 10rem;
         border-radius: 100%;
         margin-top: 4rem;
+        /* position: relative; */
         justify-content: space-between;
     }
 
@@ -1101,13 +1060,15 @@ footer p {
         text-align: center;
         position: relative;
         align-items: center;
-        height: 2.5rem;
+
     }
 
     .head {
         display: flex;
+        /* justify-content: end; */
         max-width: 10px;
         margin: 0;
+
     }
 
     .start li {
@@ -1125,25 +1086,22 @@ footer p {
     }
 
     .slideshow-container {
-        max-width: 55%;
-        margin-top: 35rem;
+        max-width: 60%;
+        margin-top: 34rem;
     }
 
     .content {
         max-width: 100%;
         margin: 0;
-        margin-right: 4rem;
-        margin-left: 4rem;
     }
 
     .content p {
         margin: 0;
         max-width: 100%;
         text-align: center;
-        margin-left: 3.3rem;
-        margin-right: 3.3rem;
-        margin-top: 2rem;
-        font-size: 1.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 2rem;
     }
 
     .form_box {
@@ -1163,156 +1121,105 @@ footer p {
     .inside_mid {
         display: flex;
         border: 2px solid white;
+        /* border: hidden; */
     }
 
     .middata {
+
         color: #666;
         font-family: CalibreFamily, Helvetica Neue, Helvetica, Arial, sans-serif;
         padding-left: 0px;
         font-size: 15px;
         margin: 0px;
         line-height: normal;
+
     }
 
     .item {
         font-size: small;
+
+
     }
 
     #item-1 h4 {
         background-color: rgb(237, 164, 173);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.2rem;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-2 h4 {
         background-color: rgb(149, 225, 249);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.2rem;
+        /* padding: 8px; */
+        max-width: 88%;
+        /* padding-bottom: 32px; */
     }
 
     #item-3 h4 {
         background-color: rgb(248, 232, 161);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.2rem;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-4 h4 {
         background-color: rgb(189, 249, 151);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.2rem;
+        /* padding: 8px; */
+        max-width: 95%;
+
     }
 
-    #item-1 p {
 
+    #item-1 p {
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
-        font-size: 1rem;
+        max-width: 90%;
+
+
     }
 
     #item-2 p {
-
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
-        font-size: 1rem;
+        max-width: 90%;
+
     }
 
     #item-3 p {
-
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
-        font-size: 1rem;
+        max-width: 90%;
+
     }
 
     #item-4 p {
-
+        font-size: 13px;
         text-align: center;
-        max-width: fit-content;
-        font-size: 1rem;
+        max-width: 90%;
+
     }
 
     .filter {
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 0px;
-        margin-left: 60px;
-
+        width: 13%;
+        min-width: 230px;
+        /* height: available; */
+        min-height: 150px;
+        float: left;
+        background-color: rgb(231, 206, 206);
+        border-collapse: separate;
+        margin-right: 2.4rem;
     }
 
-    #filter-form {
-        padding: 5px;
-        margin-top: 0px;
-    }
-
-    #filter-form ul {
-        margin-top: 0px;
-        margin-bottom: 0px;
+    .filter ul {
         list-style: none;
     }
 
-    .category-painting p {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        color: rgb(173, 25, 25);
-        font-size: 1.5rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .category-painting {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .color-group {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        /* margin-right : 0.2rem; */
-    }
-
-    .form-group {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .form-discount {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .shape {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .Exclusive {
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .apply-submit {
-        list-style: none;
-        display: inline-block;
-        padding: 0px;
-        margin: 0px;
-        margin-left: 6rem;
-        font-size: medium;
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        font-size: medium;
-        padding-right: 0px;
+    .filter h2 {
+        text-align: center;
     }
 
     .bottom {
@@ -1323,8 +1230,7 @@ footer p {
 
     .bottom p {
         text-align: center;
-        margin-left: 12rem;
-        margin-right: 10rem;
+        margin-left: 230px;
     }
 
     .button1 {
@@ -1336,9 +1242,6 @@ footer p {
         font-size: 1.7rem;
     }
 
-    .shop1 {
-        margin: 5rem;
-    }
 }
 
 
@@ -1359,10 +1262,11 @@ footer p {
 
     .image {
         width: 10rem;
-        height: 10rem;
+        height: 8rem;
         border-radius: 100%;
         margin-top: 4rem;
         margin-right: 0.5rem;
+        /* position: relative; */
         justify-content: space-between;
     }
 
@@ -1371,17 +1275,20 @@ footer p {
         justify-content: center;
         margin: 0 auto;
         max-width: 100%;
-        height: 3.8rem;
         text-align: center;
         position: relative;
         align-items: center;
+
     }
 
     .head {
         position: relative;
-        text-align: left;
+        text-align: right;
+        /* margin-left: 1200px; */
 
     }
+
+
 
     .start li {
         margin: 0;
@@ -1396,17 +1303,13 @@ footer p {
     }
 
     .slideshow-container {
-        max-width: 50%;
+        max-width: 60%;
         margin-top: 17rem;
-        margin-bottom: 5rem;
     }
 
     .content {
         max-width: 100%;
         margin: 0;
-        margin-left: 7rem;
-        margin-right: 7rem;
-
     }
 
     .content h1 {
@@ -1418,11 +1321,11 @@ footer p {
         margin: 0;
         max-width: 100%;
         text-align: center;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-        font-size: 1.3rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 2.0rem;
         line-height: 2.2rem;
+
     }
 
     .form_box {
@@ -1441,6 +1344,7 @@ footer p {
         text-align: center;
         padding: 2px;
         margin-top: 40px;
+        font-size: large;
         color: #666;
         display: flex;
         justify-content: center;
@@ -1449,6 +1353,7 @@ footer p {
     .inside_mid {
         display: flex;
         border: 2px solid white;
+        /* border: hidden; */
     }
 
     .middata {
@@ -1464,203 +1369,120 @@ footer p {
 
     .item {
         font-size: small;
+
+
     }
 
     #item-1 h4 {
         background-color: rgb(237, 164, 173);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.5rem;
+        /* padding: 8px; */
+        max-width: 88%;
 
     }
 
     #item-2 h4 {
         background-color: rgb(149, 225, 249);
         margin: auto;
-
-        max-width: fit-content;
-
-        font-size: 1.5rem;
+        /* padding: 8px; */
+        max-width: 88%;
+        /* padding-bottom: 32px; */
     }
 
     #item-3 h4 {
         background-color: rgb(248, 232, 161);
         margin: auto;
-        max-width: fit-content;
-        font-size: 1.5rem;
+        /* padding: 8px; */
+        max-width: 88%;
+
     }
 
     #item-4 h4 {
-        background-color: rgb(189, 24 max-width: fit-content;
-                font-size: 1.5rem;
-        }
+        background-color: rgb(189, 249, 151);
+        margin: auto;
+        /* padding: 8px; */
+        max-width: 95%;
 
-        #item-1 p {
-            font-size: 15px;
-            text-align: center;
-            max-width: fit-content;
-        }
-
-        #item-2 p {
-            font-size: 15px;
-            text-align: center;
-            max-width: fit-content;
-        }
-
-        #item-3 p {
-            font-size: 15px;
-            text-align: center;
-            max-width: fit-content;
-        }
-
-        #item-4 p {
-            font-size: 15px;
-            text-align: center;
-            max-width: fit-content;
-        }
+    }
 
 
-        .bottom {
-            background-color: #d7e6f5 !important;
-            margin: 0;
-            text-align: center;
-        }
-
-        .bottom p {
-            text-align: center;
-            margin-left: 270px;
-        }
-
-        .button1 {
-            margin-left: 0px;
-            margin-bottom: 0rem;
-            padding: 0;
-            margin-top: 0;
-            text-align: center;
-            font-size: 1.7rem;
-        }
-
-        .shop1 {
-            margin: 2rem 6rem 4rem;
-        }
-
-
-
-        .category-painting {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .color-group {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .form-group {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .form-discount {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-
-        }
-
-        .filter {
-            display: block;
-            margin-top: 20px;
-            margin-bottom: 0px;
-            margin-left: 60px;
-
-        }
-
-        #filter-form {
-            padding: 5px;
-            margin-top: 0px;
-        }
-
-        #filter-form ul {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            list-style: none;
-        }
-
-        .category-painting p {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-            color: rgb(173, 25, 25);
-            font-size: 1.5rem;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        .category-painting {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .color-group {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-
-        }
-
-        .form-group {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .form-discount {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .shape {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .Exclusive {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .apply-submit {
-            list-style: none;
-            display: inline-block;
-            padding: 0px;
-            margin: 0px;
-            margin-left: 6rem;
-            font-size: medium;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            font-size: medium;
-            padding-right: 0px;
-        }
+    #item-1 p {
+        font-size: 15px;
+        text-align: center;
+        max-width: 80%;
 
 
     }
 
-    .loginMSG {
-        background: #89f368;
-        display: none;
-        padding: 10px;
-        border-radius: 10px;
-        color: white;
-        font-weight: bold;
-        word-spacing: 3px;
+    #item-2 p {
+        font-size: 15px;
+        text-align: center;
+        max-width: 80%;
+
     }
+
+    #item-3 p {
+        font-size: 15px;
+        text-align: center;
+        max-width: 80%;
+
+    }
+
+    #item-4 p {
+        font-size: 15px;
+        text-align: center;
+        max-width: 80%;
+
+    }
+
+    .filter {
+        width: 13%;
+        min-width: 220px;
+        /* height: available; */
+        min-height: 150px;
+        float: left;
+        background-color: rgb(231, 206, 206);
+        border-collapse: separate;
+        margin-right: 2.4rem;
+    }
+
+    .filter ul {
+        list-style: none;
+    }
+
+    .filter h2 {
+        text-align: center;
+    }
+
+    .bottom {
+        background-color: #d7e6f5 !important;
+        margin: 0;
+        text-align: center;
+    }
+
+    .bottom p {
+        text-align: center;
+        margin-left: 270px;
+    }
+
+    .button1 {
+        margin-left: 0px;
+        margin-bottom: 0rem;
+        padding: 0;
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+}
+
+
+.loginMSG {
+    background: #89f368;
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    word-spacing: 3px;
+}
