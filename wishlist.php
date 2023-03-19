@@ -70,6 +70,7 @@
         </header>
     </div>
     
+    <div id="remove-alert"></div>
 <?php 
 
     require "db/function.php";
@@ -79,8 +80,10 @@
         $query = "select * from liked_images where user_id = '$user_id';";
         require "db/mainDB.php";
         $result = mysqli_query($conn,$query);
+        // print_r ();
         if ($result){
-            $div_container = "<div style='text-align:center;'>";
+            if (mysqli_num_rows($result)!=0){
+                $div_container = "<div style='text-align:center;'>";
             $id=-1;
             while ($data = mysqli_fetch_assoc($result)){
                 // print_r($data);
@@ -108,9 +111,15 @@
                 }
                 
             }
+            
             $div_container.="</div>";
-            echo $div_container; 
+            echo $div_container;
+            }else{
+            echo "<center><h3>Nothing to show !</h3></center>";
+            }
+             
         }
+        
     }
     else {
         header("location:sign_in.html");
@@ -122,6 +131,10 @@
 
     
 </body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 <script>
 
 var imag = document.querySelectorAll(".all_image");
@@ -140,7 +153,21 @@ function functionhide(id){
     // alert(img_id);
 }
 
-
+function remove(sno_delete_img){
+        $.ajax({
+            url: "http://localhost/art-community-website-master/Api/remove_liked.php",
+            type: "POST",
+            data:{"sno":sno_delete_img},
+            beforeSend: function () {        
+                },
+            success: function(data) {
+                console.log(data);
+            },
+            error : function(data){
+                $("#remove-alert").text(data);
+            }
+        });    
+}
 
 </script>
 
