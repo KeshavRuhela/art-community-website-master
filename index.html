@@ -31,10 +31,11 @@
             font-weight: bold;
             word-spacing: 3px;
         }
-        #view-all:hover{
-            background:green;
-            color: white!important;
-            
+
+        #view-all:hover {
+            background: green;
+            color: white !important;
+
         }
     </style>
 
@@ -56,8 +57,6 @@
                         <p><input type="text" class="search" placeholder="Search" class="search"></p>
                     </li>
                     <li>
-
-                    <li>
                         <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
                     </li>
                     <li>
@@ -71,7 +70,8 @@
                     </li>
                     <li>
                         <p class="head"><a href="cart.html"><span
-                                    class="material-symbols-outlined">shopping_cart_checkout</span></a></p>
+                                    class="material-symbols-outlined">shopping_cart_checkout</span></a>
+                        </p>
                     </li>
                 </ul>
                 <hr>
@@ -85,9 +85,8 @@
                     <a href="category_view.php?category={{text}}">
                         <div><img class="image" alt="{{text}}" src="images/{{catname}}" loading="lazy"></div>
                         <div class="image_name">
-                            <p>{{text}} painting</p>
+                            <p>{{text}} Painting</p>
                         </div>
-
                     </a>
                 </li>
             </ul>
@@ -206,18 +205,20 @@
         </div>
 
     </div>
+    <hr>
     <div class="shop">
-        <section class="filter">
+        <div class="filter">
 
+            <form id="filter-form">
 
-            <div id="filter-section">
-                <form id="filter-form">
-                    <h1>Filters</h1>
-
-                    <div class="category-painting">
-                        <label for="Painting">Art_type</label>
+                <ul>
+                    <li class="category-painting">
+                        <p>Filter By:</p>
+                        <!-- <label for="Painting"> Category</label> -->
                         <select name="painting" id="painting">
-                            <option value="">Any</option>
+
+                            <option class="fit_category" value="Category">Category</option>
+
                             <option value="Madhubani Painting">Madhubani Painting</option>
                             <option value="Miniature Painting">Miniature Painting</option>
                             <option value="Gond Painting">Gond Painting</option>
@@ -225,49 +226,86 @@
                             <option value="Warli Painting">Warli Painting</option>
                             <option value="Tanjore Painting">Tanjore Painting</option>
                             <option value="Kalamkari Painting">Kalamkari Painting</option>
+                        </select>
+                    </li>
+                    <li class="color-group">
+                        <!-- <label for="Color">Color</label> -->
+                        <select name="color" id="color">
+                            <option value="Color">Color</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Grey">Grey</option>
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Red">Red</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Neutral">Neutral</option>
+                        </select>
+                    </li>
+
+                    <li class="form-group">
+                        <!-- <label for="price">Price Range</label> -->
+                        <select name="price" id="price">
+                            <option value="Price Range">Price Range</option>
+                            <option value="0-50">Rs0 - Rs50</option>
+                            <option value="50-100">Rs50 - Rs100</option>
+                            <option value="100-500">Rs100 - Rs500</option>
+                            <option value="500+">Rs500+</option>
+                        </select>
+                    </li>
+                    <li class="form-discount">
+                        <!-- <label for="price"> Discount</label> -->
+                        <select name="Discount" id="Discount">
+                            <option value="Discount">Discount</option>
+                            <option value="0-10">10%</option>
+                            <option value="10-20">20%</option>
+                            <option value="30-40">30%</option>
+                            <option value="40-50">50%</option>
+                            <option value="50-60">60%</option>
+                            <option value="60-70">70%</option>
+                            <option value="70-80">80%</option>
+                            <option value="80-90">90%</option>
+                            <option value="90-100">100%</option>
+                        </select>
+                    </li>
+                    <li class="shape">
+
+                        <select name="shape" id="shape">
+                            <option value="shape">Shape</option>
+                            <option value="Landscape">Landscape</option>
+                            <option value="Potrait">Potrait</option>
+                            <option value="Panoramic">Panoramic</option>
+                            <option value="Square">Square</option>
+                            <option value="Slim">Slim</option>
+
+                        </select>
+                    </li>
+                    <li class="Exclusive">
+                        <select name="Exclusive" id="Exclusive">
+                            <option value="Exclusive">Exclusive</option>
 
                         </select>
 
-
-                        <div class="color-group">
-                            <label for="Color">Color:</label>
-                            <select name="color" id="color">
-                                <option value="">Any</option>
-                                <option value="Yellow">Yellow</option>
-                                <option value="Green">Green</option>
-                                <option value="Blue">Blue</option>
-                                <option value="Grey">Grey</option>
-                                <option value="Black">Black</option>
-                                <option value="White">White</option>
-                                <option value="Red">Red</option>
-                                <option value="Orange">Orange</option>
-                                <option value="Neutral">Neutral</option>
-                            </select>
+                    </li>
 
 
-                            <div class="form-group">
-                                <label for="price">Price Range:</label>
-                                <select name="price" id="price">
-                                    <option value="">Any</option>
-                                    <option value="0-50">RS0 - Rs50</option>
-                                    <option value="50-100">Rs50 - Rs100</option>
-                                    <option value="100-500">Rs100 - Rs500</option>
-                                    <option value="500+">Rs500+</option>
-                                </select>
-                            </div>
+                    <li class="apply-submit">
+                        <button type="submit">Apply</button>
+                        <button type="reset">Reset</button>
+                    </li>
 
-                            <div class="form-group">
-                                <button type="submit">Apply</button>
-                                <button type="reset">Reset</button>
-                            </div>
-                </form>
-            </div>
-        </section>
+            </form>
+            </ul>
+        </div>
+
         <div class="shop1" appml-data="shop">
             <a class="shopping_section" appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
                     style="width:180px;height: 230px; cursor: pointer; border-radius: 10px; margin:12px;"
                     src="images/shop{{id}}.jpg"></a>
-                    <a href="db/show_all.php" id="view-all" style="width:180px; height: 230px; cursor: pointer; border-radius: 10px; padding: 20px; border: 2px solid lightgreen;color: green; margin:12px;">View All</a>
+            <a href="db/show_all.php" id="view-all"
+                style="width:150px; height: 200px; cursor: pointer; border-radius: 10px; padding: 15px;margin-top: 30px; border: 2px solid rgb(32, 32, 31);color: rgb(240, 244, 240); margin:15px;">
+                View All</a>
         </div>
     </div>
     </div>
