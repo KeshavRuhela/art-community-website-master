@@ -22,6 +22,15 @@
 
 
     <style>
+        #searchshowingarea{
+    position: absolute;
+    background-color: bisque;
+    width: 40%;
+    text-align: center;
+    z-index: 100000;
+    display: flex;
+    margin-left: 1.5rem;
+}
         .loginMSG {
             background: #89f368;
             display: none;
@@ -86,7 +95,10 @@ background: #ff6060;
                         <h1 class="art">ART AVENUE &nbsp;</h1>
                     </li>
                     <li>
-                        <p><input type="text" class="search" placeholder="Search" class="search"></p>
+                        <p><input type="text" id="picse" onkeyup="searching()" name="picse" placeholder="Search" class="search"></p>
+                        <div id="searchshowingarea">
+                        </div>
+                        <b id ="crosssear" onclick="closesearch()" style="position:relative;top:0px; right:-30px; display: none; z-index: 10000000; color:red;cursor: pointer;">X</b>
                     </li>
                     <li>
                         <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
@@ -355,6 +367,7 @@ background: #ff6060;
 </body>
 <script src="main.js"></script>
 <script src="1.js"></script>
+<script src="search.js"></script>
 
 
 </html>
