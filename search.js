@@ -1,23 +1,38 @@
-var picse = document.getElementById('picse');
-var area = document.getElementById('searchshowingarea');
-var crosssear = document.getElementById('crosssear');
-area.style.display = "none";
+var picse = $('#picse');
+var area =$('#searchshowingarea');
+var crosssear = $('#crosssear');
 
 function searching(){
-    area.style.display = "block";
-    crosssear.style.display = "block";
-    area.innerText = picse.value;
-    console.log(picse.value)
-    if (picse.value == ""){
-    crosssear.style.display = "none";
+    // alert(picse.val())
+    area.show();
+    crosssear.show();
+    area.text(picse.val());
+    console.log(picse.val())
+    if (picse.val() == ""){
+    crosssear.hide();
     }
-
-//ajax work here
-
-
+    $.ajax({
+        url: "http://localhost/art-community-website-master/Api/searching.php",
+        type: "GET",
+        data:{"text": picse.val()},
+        beforeSend: function () {        
+            },
+        success: function(data) {
+            console.log(data);
+            area.html(data);
+        },
+        error : function(data){
+            console.log("error");
+        }
+    });  
 }
 
 function closesearch(){
-    area.style.display = "none";
-    crosssear.style.display = "none";    
+    area.hide();
+    crosssear.hide();     
 }
+
+// var imag_hover = document.querySelectorAll(".myimagesearch-details");
+
+
+    

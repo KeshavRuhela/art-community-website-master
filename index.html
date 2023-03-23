@@ -22,15 +22,16 @@
 
 
     <style>
-        #searchshowingarea{
-    position: absolute;
-    background-color: bisque;
-    width: 40%;
-    text-align: center;
-    z-index: 100000;
-    display: flex;
-    margin-left: 1.5rem;
-}
+        #searchshowingarea {
+            position: absolute;
+            background-color: bisque;
+            width: 40%;
+            text-align: center;
+            z-index: 100000;
+            display: flex;
+            margin-left: 1.5rem;
+        }
+
         .loginMSG {
             background: #89f368;
             display: none;
@@ -46,38 +47,82 @@
             color: white !important;
 
         }
+
         .filter {
 
-display: contents;
+            display: contents;
 
-}
+        }
 
-select {
-font-size: 1.2rem;
-border-radius: 10px;
-margin: 5px;
-cursor: pointer;
-
-
-}
-
-.buttona {
-font-size: 1rem;
-padding-right: 1.4rem;
-padding-left: 1.4rem;
-font-weight: 700;
-border-radius: 10px;
-margin: 5px;
-cursor: pointer;
+        select {
+            font-size: 1.2rem;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
 
 
-}
-.buttona1:hover{
-background: #89f368;
-}
-.buttona2:hover{
-background: #ff6060;
-}
+        }
+
+        .buttona {
+            font-size: 1rem;
+            padding-right: 1.4rem;
+            padding-left: 1.4rem;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+
+
+        }
+
+        .buttona1:hover {
+            background: #89f368;
+        }
+
+        .buttona2:hover {
+            background: #ff6060;
+        }
+
+
+        /* for searching */
+        .myimagesearch-details {
+            position: relative;
+            top: -4px;
+            left: -197px;
+            width: 180px;
+            height: 233px;
+            border-radius: 15px;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 9px;
+            margin-top: 3px;
+            margin-bottom: -205px;
+            margin-right: -190px;
+
+        }
+
+        select {
+            font-size: 1.2rem;
+            border-radius: 10px;
+            margin: 5px;
+
+        }
+
+        .buttona {
+            font-size: 1rem;
+            padding-right: 1.4rem;
+            padding-left: 1.4rem;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 5px;
+
+
+        }
+
+
+
     </style>
 
 </head>
@@ -95,10 +140,13 @@ background: #ff6060;
                         <h1 class="art">ART AVENUE &nbsp;</h1>
                     </li>
                     <li>
-                        <p><input type="text" id="picse" onkeyup="searching()" name="picse" placeholder="Search" class="search"></p>
+                        <p><input type="text" id="picse" onkeyup="searching()" name="picse" placeholder="Search"
+                                class="search"></p>
                         <div id="searchshowingarea">
+
                         </div>
-                        <b id ="crosssear" onclick="closesearch()" style="position:relative;top:0px; right:-30px; display: none; z-index: 10000000; color:red;cursor: pointer;">X</b>
+                        <b id="crosssear" onclick="closesearch()"
+                            style="position:relative;top:52px; right:30px; display: none; z-index: 10000000; color:red;cursor: pointer;">X</b>
                     </li>
                     <li>
                         <p class="head"><a href="index.html"><span class="material-symbols-outlined">home</span></a></p>
@@ -252,14 +300,14 @@ background: #ff6060;
     <hr>
     <div class="shop">
         <div class="filters " style="padding:10px; background:lightgray; border-radius:10px;">
-            <form id="filter-form" style=" margin:auto;display:table;" action="<?php $_SERVER['PHP_SELF'] ?>" method="get">
+            <form id="filter-form" style=" margin:auto;display:table;" action="db/show_all.php" method="get">
                 <div class="filter">Filter By:</div>
                 <div class="filter">
                     <!-- <label for="Painting"> Category</label> -->
                     <select name="painting" id="painting">
-    
+
                         <option class="fit_category" default value="">Category</option>
-    
+
                         <option value="Madhubani Painting">Madhubani Painting</option>
                         <option value="Miniature Painting">Miniature Painting</option>
                         <option value="Gond Painting">Gond Painting</option>
@@ -293,7 +341,7 @@ background: #ff6060;
                         <option value="100-500">Rs100 - Rs500</option>
                         <option value="500">Rs500+</option>
                     </select>
-    
+
                 </div>
                 <div class="filter">
                     <!-- <label for="price"> Discount</label> -->
@@ -309,10 +357,10 @@ background: #ff6060;
                         <option value="80-90">90%</option>
                         <option value="90-100">100%</option>
                     </select>
-    
+
                 </div>
                 <div class="filter">
-    
+
                     <select name="shape" id="shape">
                         <option value="">Shape</option>
                         <option value="Landscape">Landscape</option>
@@ -320,26 +368,26 @@ background: #ff6060;
                         <option value="Panoramic">Panoramic</option>
                         <option value="Square">Square</option>
                         <option value="Slim">Slim</option>
-    
+
                     </select>
                 </div>
                 <div class="filter">
-    
+
                     <select name="Exclusive" id="Exclusive">
                         <option value="Exclusive">Exclusive</option>
-    
+
                     </select>
                 </div>
                 <div class="filter">
-    
+
                     <button class="buttona buttona1" type="submit">Apply</button>
                     <button class="buttona buttona2" type="reset">Reset</button>
-    
+
                 </div>
             </form>
         </div>
 
-        <div class="shop1" appml-data="shop">
+        <div align="center" appml-data="shop">
             <a class="shopping_section" appml-repeat="shoping"><img onclick="openNewWindow({{id}})" alt="Oil painting"
                     style="width:180px;height: 230px; cursor: pointer; border-radius: 10px; margin:12px;"
                     src="images/shop{{id}}.jpg"></a>
@@ -365,9 +413,35 @@ background: #ff6060;
     </footer>
 
 </body>
+
 <script src="main.js"></script>
 <script src="1.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="search.js"></script>
+<script >
+    
+    function functioncall(id) {
+        var imag = $(".all_image").toArray();
+        var imag_hover = $(".myimagesearch-details").toArray();// alert(imag_hover);
+        console.log(imag_hover[id]);
+        imag_hover[id].style.display = 'inline-block';
+        console.log("show");
 
+        // imag_hover[id].style.display = "inline-block";
+    }
+
+    function functionhide(id) {
+        var imag = $(".all_image").toArray();
+        var imag_hover = $(".myimagesearch-details").toArray();// alert(imag_hover);
+        console.log(imag_hover[id]);
+        imag_hover[id].style.display = "none";
+
+        console.log("hide");
+
+        // imag_hover[id].style.display = "none";
+        // alert(img_id);
+    }
+    
+</script>
 
 </html>

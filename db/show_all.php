@@ -39,6 +39,7 @@
             font-weight: 700;
             border-radius: 10px;
             margin: 5px;
+            cursor: pointer;
 
 
         }
@@ -157,24 +158,7 @@
     var a = -1;
 
     function functioncall(id) {
-
-        // imag.forEach(e => {
-        //     a +=1;
-        //     e.addEventListener('mouseover', () => {
-
-        //         // imag_hover[a].style.display ="block";
-        //     // Do something when the mouse is over the element
-
-        //   });
-        // });
-
-        //   console.log(imag_hover[id]);
         imag_hover[id].style.display = "inline-block";
-
-        // imag_hover.forEach(e=>{
-        //     e.style.display = "block";
-        // });
-
     }
 
     function functionhide(id) {
